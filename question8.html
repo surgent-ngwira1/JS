@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let discount;
+       function calculateDiscount(price, customerType, isholiday){
+        if(price < 5000){
+            console.log("no discount");
+        }
+        if(price >5000 && customerType ===" Regular"){
+            discount = price*0.05;
+        }
+        if(price > 5000 && customerType ==="member"){
+            discount = price*0.1;
+        }
+        if(price> 5000 && customerType ==="VIP"){
+            discount = price*0.2;
+        }
+         if(price> 5000 && customerType ==="VIP" && isholiday== true){
+            discount = price*0.25;
+        }
+
+        return discount;
+
+
+       }
+    </script>
+</body>
+</html>
